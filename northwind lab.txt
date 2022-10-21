@@ -1,0 +1,47 @@
+1
+Select * from Customers;
+
+2
+Select Distinct Country from Customers;
+
+3
+Select * from Customers where customerID LIKE 'BL%'
+
+4
+Select TOP 100 * from Orders;
+
+5
+Select * from Customers where PostalCode LIKE '1010' OR PostalCode like '3012' or PostalCode like '12209' or PostalCode like '05023';
+
+6
+Select * from Orders where ShipRegion is not null;
+
+7
+select * from Customers order by country, city;
+
+8
+Insert into Customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone)
+Values ('DELTA', 'Del Taco', 'Hannah Cos', 'Location Rep', 'on 14 mile', 'Clawson', 'MI', 'USA', '48084', '(248)555-5555')
+
+9
+update Orders
+Set shipRegion = 'EuroZone'
+Where ShipCountry = 'France'
+
+10
+Delete from [Order Details] where Quantity = 1;
+
+11
+Select CustomerID from Orders where OrderID = '10290'
+
+12
+Select *
+From Customers 
+FULL OUTER JOIN Orders 
+On Customers.CustomerID = Orders.CustomerID;
+
+13
+Select FirstName from Employees where ReportsTo is null;
+
+14
+Select FirstName from Employees where ReportsTo = 2;
